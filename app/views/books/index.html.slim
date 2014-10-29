@@ -1,12 +1,13 @@
 = form_tag books_path, class: "form-inline", method: :get do
-	.form-group
-		= text_field_tag :query, params[:query], class: "form-control"
-		'
-		= submit_tag "Search", class: "btn btn-primary"
+	.input-group.input-group-lg
 		- if params[:query].present?
-		'
-		= link_to "Clear", books_path
+			.input-group-btn
+				= link_to "Clear", books_path, class: "btn btn-default"
+		= text_field_tag :query, params[:query], class: "form-control", id: "book_search", autocomplete: "off"
 
+		input-group-btn
+		= submit_tag "Search", class: "btn btn-primary"
+		
 = render @books
 
 = paginate @books
