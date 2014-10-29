@@ -1,6 +1,7 @@
 class Book < ActiveRecord::Base
+  searchkick
   has_and_belongs_to_many :authors
-  has_and_belongs_to_many :subjects
+  has_and_belongs_to_many :subjects 
 
   paginates_per 5
 

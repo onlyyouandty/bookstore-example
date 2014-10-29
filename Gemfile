@@ -18,3 +18,10 @@ gem 'puma'
 gem 'shelly-dependencies'
 
 gem 'openlibrary'
+
+gem 'searchkick'
+
+group :developmnet do
+	gem 'faker'
+	gem 'populator'	
+end
